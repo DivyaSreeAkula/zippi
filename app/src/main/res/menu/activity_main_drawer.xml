@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_homez"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_sign"
+            android:title="Signup As Event Planner" />
+        <item
+            android:id="@+id/nav_login"
+            android:title="Login As Event Planner" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help" />
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1"
+    >
+
+
+    <ScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:textAllCaps="true"
+
+       >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:text="TO EVENT PLANNER: "
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:background="@color/colorPrimary"
+
+                />
+
+        <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:id="@+id/phone"
+        android:paddingTop="40dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:textAllCaps="true"
+        />
+        </RelativeLayout>
+
+
+
+
+        <Button android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:id="@+id/date"
+            android:layout_gravity="center_vertical"
+        android:text="@string/Date"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white" />
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/displaydate"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"/>
+
+        <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+               android:id="@+id/time"
+        android:text="@string/Time"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+       />
+
+        <TextView
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/displaytime"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp">
+
+        <EditText android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+            android:paddingTop="10dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="10dp"
+        android:hint="@string/Budget"
+        android:id="@+id/budget"
+        android:inputType="number"
+            android:lines="2" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp">
+
+        <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+            android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/Capacity"
+        android:id="@+id/four"
+        android:inputType="number"
+            android:lines="2" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/seven"
+            android:text="@string/Submit"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.51"
+
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+       />
+
+
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

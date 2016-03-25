@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <LinearLayout
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="@string/orgname"
+                    android:textSize="20sp"
+                    android:background="#3F51B5"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/organisationname"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                   >
+                    <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:paddingLeft="20dp"
+                android:id="@+id/logo"
+                        android:layout_alignBottom="@+id/imageButton2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:src="@drawable/call"
+                        android:paddingTop="5dp"
+                        android:background="#141c48"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:onClick="calling" />
+
+                    <ImageButton
+                        android:layout_width="79dp"
+                        android:layout_height="66dp"
+                        android:id="@+id/imageButton2"
+                        android:src="@drawable/message"
+                        android:onClick="messaging"
+                        android:paddingTop="10dp"
+                        android:background="#3F51B5"
+                        android:layout_below="@+id/imageButton"
+                        android:layout_alignLeft="@+id/imageButton"
+                        android:layout_alignStart="@+id/imageButton" />
+
+                    <ImageButton
+                        android:layout_width="79dp"
+                        android:layout_height="66dp"
+                        android:id="@+id/imageButton3"
+                        android:onClick="mail"
+                        android:src="@android:drawable/ic_dialog_email"
+                        android:background="#3F51B5"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageButton"
+                        android:layout_toStartOf="@+id/imageButton" />
+
+                </RelativeLayout>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="NAME"
+                android:textSize="20dp"
+                android:background="#3F51B5"
+                android:gravity="center_horizontal"
+                android:lines="5" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:id="@+id/name"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:background="#3F51B5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="PHONE NUMBER"
+                android:textAllCaps="true"
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textAllCaps="true"
+                android:id="@+id/phone"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:background="#3F51B5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Email Id"
+                android:textAllCaps="true"
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                android:ems="10"
+                android:textAllCaps="true"
+                android:id="@+id/email"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:background="#3F51B5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Address"
+                android:textAllCaps="true"
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:id="@+id/address"
+                android:textAllCaps="true"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Number Of events done"
+                android:id="@+id/textView"
+                android:textAllCaps="true"
+                android:background="#3F51B5"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:ems="10"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:id="@+id/events"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
