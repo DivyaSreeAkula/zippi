@@ -40,7 +40,7 @@ public class Screen1 extends Activity {
                     .setCancelable(false)
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            startActivity(new Intent(Screen1.this, AboutFragment.class));
+                            startActivity(new Intent(Screen1.this, Screen1.class));
                             finish();
 
                         }
@@ -61,7 +61,7 @@ public class Screen1 extends Activity {
             @Override
             public void run() {
 
-                Intent i = new Intent(Screen1.this, Screen1.class);
+                Intent i = new Intent(Screen1.this, HomeFragment.class);
                 startActivity(i);
 
                 finish();
