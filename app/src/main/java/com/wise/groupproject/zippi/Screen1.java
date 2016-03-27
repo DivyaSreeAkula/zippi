@@ -61,7 +61,7 @@ public class Screen1 extends Activity {
             @Override
             public void run() {
 
-                Intent i = new Intent(Screen1.this, HomeFragment.class);
+                Intent i = new Intent(Screen1.this, MainActivity.class);
                 startActivity(i);
 
                 finish();
