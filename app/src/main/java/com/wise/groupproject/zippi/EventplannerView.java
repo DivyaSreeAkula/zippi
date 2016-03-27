@@ -1,27 +1,19 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.parse.GetCallback;
 import com.parse.GetDataCallback;
-import com.parse.Parse;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -124,9 +116,7 @@ public class EventplannerView  extends AppCompatActivity
                 @Override
                 public void done(ParseObject object, com.parse.ParseException e) {
 
-                    if (object == null) {
-                        Log.d("score", "The getFirst request failed.");
-                    } else {
+                    if (!(object == null)) {
 
                         ParseFile thumbnail = (ParseFile) object.getParseFile("KEY_LOGO");
                         if (thumbnail != null) {
@@ -140,8 +130,6 @@ public class EventplannerView  extends AppCompatActivity
                                         logo.setImageBitmap(bmp);
 
 
-                                    } else {
-                                        Log.e("paser after downloade", " null");
                                     }
 
                                 }

@@ -1,8 +1,6 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -11,26 +9,17 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.gsm.SmsManager;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.CountCallback;
-import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.GetDataCallback;
-import com.parse.Parse;
-import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -38,7 +27,6 @@ import com.parse.ParseQuery;
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class EventPLannerEditing extends AppCompatActivity {
     EventPlannerModel epm;
@@ -141,11 +129,9 @@ public class EventPLannerEditing extends AppCompatActivity {
             @Override
             public void done(ParseObject object, com.parse.ParseException e) {
 
-                if (object == null) {
-                    Log.d("score", "The getFirst request failed.");
-                } else {
+                if (!(object == null)) {
 
-                    ParseFile thumbnail = (ParseFile) object.getParseFile("KEY_LOGO");
+                                    ParseFile thumbnail = (ParseFile) object.getParseFile("KEY_LOGO");
                     if (thumbnail != null) {
                         thumbnail.getDataInBackground(new GetDataCallback() {
 
@@ -158,8 +144,6 @@ public class EventPLannerEditing extends AppCompatActivity {
                                     bitimage = bmp;
 
 
-                                } else {
-                                    Log.e("paser after downloade", " null");
                                 }
 
                             }
@@ -379,8 +363,6 @@ public class EventPLannerEditing extends AppCompatActivity {
                     testObject.saveInBackground();
 
 
-                } else {
-                    Log.d("Post retrieval", "Error: " + e.getMessage());
                 }
             }
         });

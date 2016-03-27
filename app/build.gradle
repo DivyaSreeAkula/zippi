@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.nayeem.zippi"
+        applicationId "com.wise.groupproject.zippi"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

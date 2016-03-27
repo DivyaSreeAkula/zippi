@@ -1,4 +1,4 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 /**
  * Created by DIVYA on 3/21/2016.

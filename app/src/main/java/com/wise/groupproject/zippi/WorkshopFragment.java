@@ -1,18 +1,11 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 /**
  * Created by NAyeem on 2/14/2016.
  */
-
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,17 +16,14 @@ import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
-import com.parse.GetDataCallback;
-import com.parse.Parse;
-import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.List;
 
-public class BirthdayFragment extends Fragment {
+public class WorkshopFragment  extends Fragment {
 
-    private ListView lvHomePage;
+   ListView lvHomePage;
 
     String name;
     int rating;
@@ -61,9 +51,7 @@ public class BirthdayFragment extends Fragment {
                                                 @Override
                                                 public void done(ParseObject object, com.parse.ParseException e) {
 
-                                                    if (object == null) {
-                                                        Log.d("score", "The getFirst request failed.");
-                                                    } else {
+                                                    if (!(object == null)) {
                                                         int playerName = object.getInt("KEY_ROWID");
                                                         Bundle bundle = new Bundle();
                                                         bundle.putInt("myData", playerName);
@@ -78,9 +66,8 @@ public class BirthdayFragment extends Fragment {
                 );
             }
         });
-
         final ParseQuery<ParseObject> query = ParseQuery.getQuery("eventplanner");
-        query.whereEqualTo("KEY_BIRTHDAY", "y");
+        query.whereEqualTo("KEY_WORKSHOPS", "y");
         query.orderByAscending("createdAt");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override

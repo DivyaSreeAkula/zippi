@@ -1,4 +1,4 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;

@@ -1,4 +1,4 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

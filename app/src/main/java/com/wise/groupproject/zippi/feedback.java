@@ -1,11 +1,10 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.telephony.SmsManager;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;

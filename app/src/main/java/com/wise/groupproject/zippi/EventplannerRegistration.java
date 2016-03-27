@@ -1,9 +1,7 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -12,8 +10,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.gsm.SmsManager;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -22,9 +18,7 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
-import  com.example.nayeem.zippi.MultiSpinner.MultiSpinnerListener;
 import com.parse.CountCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;

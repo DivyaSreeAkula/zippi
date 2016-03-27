@@ -1,12 +1,10 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
         import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
         import android.os.Handler;
         import android.widget.TextView;
-
-        import java.lang.reflect.AccessibleObject;
 
 public class WelcomeScreen extends Activity {
     TextView welcome;

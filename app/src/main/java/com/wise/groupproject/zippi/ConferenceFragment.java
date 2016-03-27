@@ -1,14 +1,11 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
+/**
+ * Created by NAyeem on 2/14/2016.
+ */
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,18 +16,13 @@ import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
-import com.parse.GetDataCallback;
-import com.parse.Parse;
-import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.List;
 
-/**
- * Created by Ratan on 7/29/2015.
- */
-public class WeddingFragment extends Fragment {
+public class ConferenceFragment  extends Fragment {
+
     private ListView lvHomePage;
 
     String name;
@@ -43,6 +35,7 @@ public class WeddingFragment extends Fragment {
         lvHomePage = (ListView) view.findViewById(R.id.listView);
         txt=(TextView)view.findViewById(R.id.textView);
         adapter=new ArrayAdapter<String>(getActivity().getApplicationContext(),R.layout.each);
+
 
 
         lvHomePage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -58,9 +51,8 @@ public class WeddingFragment extends Fragment {
                                                 @Override
                                                 public void done(ParseObject object, com.parse.ParseException e) {
 
-                                                    if (object == null) {
-                                                        Log.d("score", "The getFirst request failed.");
-                                                    } else {
+                                                    if (!(object == null)) {
+
                                                         int playerName = object.getInt("KEY_ROWID");
                                                         Bundle bundle = new Bundle();
                                                         bundle.putInt("myData", playerName);
@@ -76,7 +68,7 @@ public class WeddingFragment extends Fragment {
             }
         });
         final ParseQuery<ParseObject> query = ParseQuery.getQuery("eventplanner");
-        query.whereEqualTo("KEY_WEDDING", "y");
+        query.whereEqualTo("KEY_CONFERENCES", "y");
         query.orderByAscending("createdAt");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override

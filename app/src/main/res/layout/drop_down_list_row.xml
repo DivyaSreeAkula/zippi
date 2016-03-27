@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".EventplannerRegistration">
 
-    <com.example.nayeem.zippi.MultiSpinner
+    <com.wise.groupproject.zippi.MultiSpinner
         android:id="@+id/mySpinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

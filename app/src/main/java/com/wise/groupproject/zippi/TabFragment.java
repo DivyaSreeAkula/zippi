@@ -1,12 +1,8 @@
-package com.example.nayeem.zippi;
+package com.wise.groupproject.zippi;
 
 /**
  * Created by NAyeem on 2/14/2016.
  */
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -17,7 +13,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 public class TabFragment extends Fragment{
     public static TabLayout tabLayout;
